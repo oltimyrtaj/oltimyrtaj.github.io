@@ -1,0 +1,5 @@
+website_data/
+*.hdf5
+.DS_Store
+__pycache__/
+tools/render/fonts/

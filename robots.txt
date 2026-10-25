@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://oltimyrtaj.github.io/sitemap.xml

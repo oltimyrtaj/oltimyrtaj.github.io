@@ -1,0 +1,440 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Research | Olti Myrtaj</title>
+<meta name="description" content="How the Milky Way got its spin: Olti Myrtaj's FIRE-2 research on the three kinematic phases of Milky Way-mass galaxies, baryonic sloshing, and the formation of gas and stellar disks.">
+<link rel="canonical" href="https://oltimyrtaj.github.io/research.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Olti Myrtaj">
+<meta property="og:title" content="Research | Olti Myrtaj">
+<meta property="og:description" content="How the Milky Way got its spin: Olti Myrtaj's FIRE-2 research on the three kinematic phases of Milky Way-mass galaxies, baryonic sloshing, and the formation of gas and stellar disks.">
+<meta property="og:url" content="https://oltimyrtaj.github.io/research.html">
+<meta property="og:image" content="https://oltimyrtaj.github.io/images/three-phases.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "From protogalaxy through thick and thin: Why did the Milky Way evolve in three kinematic phases?",
+  "author": [
+    {"@type": "Person", "name": "Olti Myrtaj", "url": "https://oltimyrtaj.github.io/"},
+    {"@type": "Person", "name": "J. S. Bullock"},
+    {"@type": "Person", "name": "M. Boylan-Kolchin"},
+    {"@type": "Person", "name": "V. Chandra"},
+    {"@type": "Person", "name": "C.-A. Faucher-Giguère"},
+    {"@type": "Person", "name": "R. Feldmann"},
+    {"@type": "Person", "name": "P. J. Gandhi"},
+    {"@type": "Person", "name": "F. J. Mercado"},
+    {"@type": "Person", "name": "J. Moreno"},
+    {"@type": "Person", "name": "J. Stern"},
+    {"@type": "Person", "name": "A. Wetzel"},
+    {"@type": "Person", "name": "L. Y. Xia"}
+  ],
+  "datePublished": "2026",
+  "isPartOf": {"@type": "Periodical", "name": "Monthly Notices of the Royal Astronomical Society"},
+  "url": "https://arxiv.org/abs/2605.22806",
+  "about": ["Milky Way", "Galaxy formation", "Galactic disks", "Cosmological simulations"]
+}
+</script>
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Jost:wght@300..600&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..700&amp;display=swap">
+<link rel="stylesheet" href="css/style.css">
+<script src="js/site.js"></script>
+<script src="js/galaxy-gl.js" defer></script>
+<script src="js/galaxy.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+  <a class="wordmark" href="index.html">Olti Myrtaj</a>
+  <nav class="site-nav" aria-label="Main">
+    <ul>
+      <li><a href="index.html">About</a></li>
+      <li><a href="research.html" aria-current="page">Research</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="cv.html">CV</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="site-main">
+
+  <header class="page-head">
+    <h1>How the Milky Way got its spin</h1>
+    <p class="lede">Gaia and APOGEE have directly observed three phases in the kinematic evolution of our galaxy: a disordered protogalaxy, a hot, thick disk, and a cold, thin disk. I use FIRE-2 cosmological zoom-in simulations of Milky Way-mass galaxies to study the dynamics and physics of these phases.</p>
+    <nav class="page-contents" aria-label="On this page">
+      <a href="#remembers-heading">The Milky Way remembers</a>
+      <a href="#phases-heading">Three phases</a>
+      <a href="#model-heading">The three phases in motion</a>
+      <a href="#twelve-heading">Twelve galaxies</a>
+      <a href="#why-heading">Why disks form when they do</a>
+      <a href="#paper-heading">Publications</a>
+      <a href="#current-heading">Current research</a>
+    </nav>
+  </header>
+
+  <figure class="slot wide-figure" data-slot="Movie of Romeo forming its disk, face-on and edge-on">
+    <div class="frame" style="--ar: 16 / 9">
+      <video controls muted loop playsinline preload="metadata" width="1280" height="720" poster="images/gallery/disk-formation-poster.jpg" aria-label="Movie of the simulated galaxy Romeo forming its disk over 13 billion years, face-on and edge-on, with a timeline of its three phases">
+        <source src="images/gallery/disk-formation.mp4" type="video/mp4">
+        <source src="images/gallery/disk-formation.webm" type="video/webm">
+        This browser cannot play the movie.
+      </video>
+    </div>
+    <figcaption><strong>A disk forms.</strong> Romeo over the last 13 billion years, face-on and edge-on in mock starlight. A thick disk emerges from the chaotic protogalaxy and later cools into a thin spiral disk. The timeline marks the formation of the stellar disk, 11.7 Gyr ago, and cooldown, 5.9 Gyr ago.</figcaption>
+  </figure>
+
+  <section class="section" aria-labelledby="remembers-heading">
+    <h2 id="remembers-heading">The Milky Way remembers</h2>
+    <p class="section-intro">For the most part, stars maintain the kinematic properties they were born with, and each new generation of stars forms from gas that has been continuously enriched with metals such as iron. A star&rsquo;s orbit and chemistry therefore record how and when it formed.</p>
+    <p class="section-intro">Gaia and APOGEE measure the motions and chemical abundances of millions of stars in the Milky Way. These surveys have revealed three phases in its history. FIRE-2 simulations of Milky Way-mass galaxies reproduce all three, and they show where each generation of stars sits today.</p>
+    <figure class="slot wide-figure" data-slot="Figure 1 of the paper: circularity versus [Fe/H] for Gaia red giants and for star particles in Romeo">
+      <div class="frame" style="--ar: 2 / 1">
+        <button class="zoom" type="button" aria-label="Enlarge the Gaia and Romeo comparison"><img src="images/research/gaia-vs-romeo.png" alt="Two panels of orbital circularity against [Fe/H], for Gaia red giants and for star particles in the simulated galaxy Romeo, both showing three kinematic phases" loading="lazy"></button>
+      </div>
+      <figcaption><strong>Three-phase kinematic evolution in the Milky Way and in a FIRE-2 simulation.</strong> Column-normalized distributions of orbital circularity against [Fe/H], a proxy for stellar formation time, for Gaia red-giant-branch stars (left, reproduced from Chandra et al. 2024) and for star particles within 20 kpc of the center of Romeo (right). The transitions occur at higher [Fe/H] in Romeo. Figure 1 of <a href="https://arxiv.org/abs/2605.22806">Myrtaj et al. (2026)</a>.</figcaption>
+    </figure>
+    <figure class="slot wide-figure" data-slot="Romeo today, edge-on, with its stars split by birth phase">
+      <div class="frame">
+        <button class="zoom" type="button" aria-label="Enlarge: Three generations of stars"><img src="images/gallery/birth-phases.jpg" alt="Four edge-on panels of Romeo today: all stars, then only the stars born in the protogalaxy, a compact spheroid, in the thick disk, a puffy disk, and in the thin disk, a thin and extended disk" width="1806" height="906" loading="lazy"></button>
+      </div>
+      <figcaption><strong>Three generations of stars.</strong> Romeo today, edge-on, with its stars sorted by the phase they were born in. Protogalaxy stars form a compact spheroid, thick-disk stars a puffy disk, and thin-disk stars a thin, extended disk. Each panel is scaled to its own brightness.</figcaption>
+    </figure>
+  </section>
+
+  <section class="section" aria-labelledby="phases-heading">
+    <h2 id="phases-heading">Three phases</h2>
+    <p class="section-intro">The images show Romeo, one of the twelve simulated galaxies, edge-on in each phase.</p>
+    <div class="phase-grid">
+      <article class="phase phase-proto">
+        <figure class="slot" data-slot="Romeo, edge-on, in its protogalaxy phase">
+          <div class="frame" style="--ar: 2 / 1">
+            <button class="zoom" type="button" aria-label="Enlarge the protogalaxy image"><img src="images/research/phase-protogalaxy.jpg" alt="Mock starlight image of the simulated galaxy Romeo 12.8 billion years ago, seen edge-on: an irregular cloud of young blue stars" width="800" height="400" loading="lazy"></button>
+          </div>
+          <figcaption class="visually-hidden"><strong>Protogalaxy.</strong> Romeo 12.8 Gyr ago, seen edge-on in mock starlight.</figcaption>
+        </figure>
+        <h3>Protogalaxy</h3>
+        <p>Star formation rate is low and bursty and the conversion rate of gas into stars is also low. The galaxy baryons (gas and stars) slosh around the galaxy's center of mass. The galaxy has no net angular momentum. The potential is not centrally concentrated, and its shape is chaotic.</p>
+      </article>
+      <article class="phase phase-thick">
+        <figure class="slot" data-slot="Romeo, edge-on, in its thick-disk phase">
+          <div class="frame" style="--ar: 2 / 1">
+            <button class="zoom" type="button" aria-label="Enlarge the thick-disk image"><img src="images/research/phase-thick-disk.jpg" alt="Romeo 7.1 billion years ago, seen edge-on: a puffy, dusty disk dotted with young stars" width="800" height="400" loading="lazy"></button>
+          </div>
+          <figcaption class="visually-hidden"><strong>Thick disk.</strong> Romeo 7.1 Gyr ago, seen edge-on in mock starlight.</figcaption>
+        </figure>
+        <h3>Thick disk</h3>
+        <p>The galaxy acquires a defined dynamical center and the sloshing ends. The baryons become well-centered in the total potential, and the gas begins to rotate coherently. Then, stars later also begin to acquire a net rotation. The star formation peaks and remains bursty, although the conversion rate of gas into stars peaks in this era. The disk begins its formation while the potential is most unconcentrated, and it only becomes centrally concentrated, plateauing a few Gyr after the disk begins its formation.</p>
+      </article>
+      <article class="phase phase-thin">
+        <figure class="slot" data-slot="Romeo, edge-on, today">
+          <div class="frame" style="--ar: 2 / 1">
+            <button class="zoom" type="button" aria-label="Enlarge the thin-disk image"><img src="images/research/phase-thin-disk.jpg" alt="Romeo today, seen edge-on: a thin disk crossed by a dark dust lane, around a yellow bulge" width="800" height="400" loading="lazy"></button>
+          </div>
+          <figcaption class="visually-hidden"><strong>Thin disk.</strong> Romeo today, seen edge-on in mock starlight.</figcaption>
+        </figure>
+        <h3>Thin disk</h3>
+        <p>The thin disk is triggered by the virialization of the inner circumgalactic medium, the gas surrounding the galaxy. Star formation rates become steady in this phase, and the conversion rate of gas into stars is at an intermediate value. The youngest stars form on cold, nearly circular orbits. The potential is very centrally concentrated.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="model-heading">
+    <h2 id="model-heading">The three phases in motion</h2>
+    <p class="section-intro">A toy model that animates the sequence with simple rules. In the protogalaxy, cold gas streams accrete asymmetrically along filaments, small satellite galaxies merge constantly, and bursts of star formation blow hot gas back out — the galaxy is in a state of disequilibrium. Once the baryonic center is well-defined as gas and stars stop sloshing within the total potential, a clumpy, hot thick disk emerges, which then later transitions into a cool thin disk.</p>
+    <figure class="instrument">
+      <div class="viewport">
+        <canvas id="galaxy" role="img" aria-label="Heuristic example, not actual data: an animated toy model of a Milky Way-mass galaxy forming over cosmic time, with cold gas flowing in, satellites merging, hot gas blown out, and stars and dust in a disk that grows thin."></canvas>
+        <p class="model-flag">Heuristic example: not actual data</p>
+        <span class="com-marker" aria-hidden="true" hidden></span>
+        <div class="scalebar" aria-hidden="true" hidden><span class="scalebar-line"></span><span class="scalebar-label">5 kpc</span></div>
+      </div>
+      <div class="controls">
+        <button id="play" class="play" type="button" aria-pressed="false" aria-controls="galaxy">
+          <svg class="icon-play" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1l9 5-9 5z"/></svg>
+          <svg class="icon-pause" viewBox="0 0 12 12" aria-hidden="true"><path d="M2 1h3v10H2zM7 1h3v10H7z"/></svg>
+          <span class="label">Play</span>
+        </button>
+        <div class="timeline">
+          <label class="visually-hidden" for="epoch">Cosmic time</label>
+          <input id="epoch" type="range" min="0" max="1000" step="1" value="1000" aria-valuetext="Today">
+          <ol class="phase-labels" aria-hidden="true">
+            <li style="--at: 15%">Protogalaxy</li>
+            <li style="--at: 44%">Thick disk</li>
+            <li style="--at: 79%">Thin disk</li>
+          </ol>
+        </div>
+      </div>
+      <div class="toggles" hidden>
+        <div class="segmented" role="group" aria-label="Viewing angle">
+          <button type="button" data-incl="84" aria-pressed="true">Edge-on</button>
+          <button type="button" data-incl="24" aria-pressed="false">Face-on</button>
+        </div>
+      </div>
+      <p id="epoch-status" class="status" aria-live="polite"><strong>Today.</strong> For the most part, each generation of stars keeps the orbits it was born on, leaving a round spheroid laced with the debris of merged satellites, a thick disk and a thin disk.</p>
+      <ul class="legend">
+        <li><span class="swatch" style="--c: #8fb3ff"></span>Young stars</li>
+        <li><span class="swatch" style="--c: #ffad6b"></span>Old stars</li>
+        <li><span class="swatch swatch-gas" style="--c: #ff5d97"></span>Star-forming gas</li>
+        <li><span class="swatch swatch-gas" style="--c: #54e0cc"></span>Cold inflows</li>
+        <li><span class="swatch swatch-gas" style="--c: #bd8cff"></span>Hot outflows</li>
+        <li><span class="swatch swatch-com"></span>Center of mass</li>
+      </ul>
+      <figcaption>A heuristic toy model of the three kinematic phases found in <a href="https://arxiv.org/abs/2605.22806">Myrtaj et al. (2026)</a>, drawn from simple rules to show the sequence. This is not actual simulation data, to be precise.<span data-caption="light" hidden> Star colors show age, and dark lanes are dust.</span> Drag the slider to move through cosmic time, or press Play.</figcaption>
+    </figure>
+  </section>
+
+  <section class="section" aria-labelledby="twelve-heading">
+    <h2 id="twelve-heading">Twelve galaxies</h2>
+    <p class="section-intro">Simulated Milky Way-mass galaxies experience the same three phases.</p>
+    <figure class="slot wide-figure" data-slot="All twelve galaxies today, face-on and edge-on">
+      <div class="frame">
+        <button class="zoom" type="button" aria-label="Enlarge: Twelve Milky Way-mass galaxies"><img src="images/gallery/twelve-galaxies.jpg" alt="Mock starlight images of twelve simulated Milky Way-mass spiral galaxies at the present day, each shown face-on above and edge-on below" width="2400" height="1195" loading="lazy"></button>
+      </div>
+      <figcaption><strong>Twelve Milky Way-mass galaxies.</strong> The FIRE-2 suite at the present day, seen face-on and edge-on in mock starlight: the Local Group-like pairs Romeo and Juliet, Romulus and Remus, and Thelma and Louise (top), and the isolated m12b, m12c, m12f, m12i, m12m and m12r (bottom). All twelve share one brightness scale.</figcaption>
+    </figure>
+    <figure class="slot wide-figure" data-slot="Figure 5 of the paper: median circularity of gas and young stars in all twelve galaxies">
+      <div class="frame">
+        <button class="zoom" type="button" aria-label="Enlarge: The same phases in every galaxy"><img src="images/research/paper-fig5-suite-circularity.png" alt="Twelve panels, one per simulated galaxy, of the median circularity of gas and young stars against lookback time, with the formation of the gas disk, the formation of the stellar disk and cooldown marked" width="1800" height="1023" loading="lazy"></button>
+      </div>
+      <figcaption><strong>The same phases in every galaxy.</strong> Median circularity of young stars (orange) and gas (green) against lookback time for all twelve galaxies, with the formation of the gas disk (green), the formation of the stellar disk (orange) and cooldown (blue) marked. A late major merger lowers m12r&rsquo;s circularities after cooldown. Figure 5 of <a href="https://arxiv.org/abs/2605.22806">Myrtaj et al. (2026)</a>.</figcaption>
+    </figure>
+  </section>
+
+  <section class="section" aria-labelledby="why-heading">
+    <h2 id="why-heading">Why disks form when they do</h2>
+    <p class="section-intro">The full suite of FIRE-2 Milky Way-mass galaxies forms disks under the same physical conditions. Disks emerge at no particular gas fraction, stellar mass or halo mass, and mergers play no systematic role in either transition.</p>
+    <article class="block" id="settling">
+      <div class="block-text">
+        <div class="block-copy">
+          <h3>Baryonic settling precedes disk formation</h3>
+          <p>In the protogalaxy, the baryons slosh as the center of mass of the gas and stars moves chaotically within the total potential. The gas begins to rotate coherently only once this motion settles and the galaxy has a well-defined dynamical center, which makes baryonic settling a prerequisite for disk formation.</p>
+          <p>The movie shows Thelma, whose gas disk emerges 7.8 Gyr ago. In its protogalaxy phase, the bulk motion of its baryons (stars and gas) changes direction violently every few hundred million years, and s<sub>b</sub> rises and falls sharply. After the gas disk forms, these bulk motions stay low.</p>
+        </div>
+      </div>
+      <div class="block-figs">
+        <figure class="slot" data-slot="Movie of Thelma&rsquo;s protogalaxy with its sloshing parameter">
+          <div class="frame" style="--ar: 16 / 9">
+            <video controls muted loop playsinline preload="metadata" width="1280" height="720" poster="images/research/sloshing-thelma-poster.jpg" aria-label="Movie of the galaxy Thelma in stars and cold gas over 13 billion years, with an arrow for the bulk motion of its baryons, beside a plot of its sloshing parameter, which swings widely until the gas begins to rotate and stays low afterward">
+              <source src="images/research/sloshing-thelma.mp4" type="video/mp4">
+              <source src="images/research/sloshing-thelma.webm" type="video/webm">
+              This browser cannot play the movie.
+            </video>
+          </div>
+          <figcaption><strong>Baryons chaotically slosh, then baryons settle.</strong> Thelma over the last 13 billion years, in stars and cold gas (teal), beside its sloshing parameter s<sub>b</sub> from <a href="https://arxiv.org/abs/2605.22806">Myrtaj et al. (2026)</a>. The arrow shows the net bulk motion of the baryons relative to the galaxy&rsquo;s center, projected onto the image, with its full length set by s<sub>b</sub> and its color darker for larger s<sub>b</sub>. s<sub>b</sub> swings widely while the protogalaxy is disordered. Once the disk forms 7.8 Gyr ago, it stays low.</figcaption>
+        </figure>
+      </div>
+    </article>
+    <article class="block flip" id="gas-first">
+      <div class="block-text">
+        <div class="block-copy">
+          <h3>Gas disks form before stellar disks</h3>
+                  <p>Cool gas acquires coherent rotation first, and the rotational support of newly formed stars rises only after a delay of a few hundred Myr to more than 3 Gyr in some systems. Milky Way progenitors therefore pass through a phase in which a rotationally supported cool-gas disk coexists with kinematically hot, weakly rotating young stars.</p>
+          <p>Thelma has the longest delay between the emergence of its gas disk and the emergence of its stellar disk in the suite. Its gas rotates as a disk 3.2 Gyr before its stars do. In every galaxy, the gas disk forms before the stars, and cooldown comes after the stellar disk forms. The formation time of the stellar disk and the cooldown time are only weakly correlated, which points to distinct physics behind the two transitions.</p>
+        </div>
+        <figure class="slot" data-slot="Figure 6 of the paper: disk-formation and cooldown times">
+          <div class="frame">
+            <button class="zoom" type="button" aria-label="Enlarge: Gas disks form before stellar disks, and stellar disks form before cooldown"><img src="images/research/paper-fig6-spinup-times.png" alt="Two scatter plots for the twelve galaxies: the formation time of the gas disk against that of the stellar disk, and the formation time of the stellar disk against the cooldown time, all points on one side of the one-to-one line" width="1800" height="860" loading="lazy"></button>
+          </div>
+          <figcaption><strong>Gas disks form before stellar disks, and stellar disks form before cooldown.</strong> Formation times of the gas disk against those of the stellar disk (left), and formation times of the stellar disk against cooldown times (right), in lookback time, with the one-to-one line dashed. Figure 6 of <a href="https://arxiv.org/abs/2605.22806">Myrtaj et al. (2026)</a>.</figcaption>
+        </figure>
+      </div>
+      <div class="block-figs">
+        <figure class="slot" data-slot="Figure D1 of the paper: Thelma&rsquo;s velocity maps">
+          <div class="frame">
+            <button class="zoom" type="button" aria-label="Enlarge: The gas disk forms first"><img src="images/research/paper-figD1-thelma-velocity.jpg" alt="Edge-on velocity maps of the gas and the young stars in Thelma at four times. The gas rotates as a disk long before the young stars do." width="1400" height="2114" loading="lazy"></button>
+          </div>
+          <figcaption><strong>The gas disk forms first.</strong> Thelma edge-on, gas (left) and young stars (right), colored by line-of-sight velocity, just before the formation of its gas disk (7.86 Gyr ago), just before the formation of its stellar disk (4.88 Gyr ago), just before cooldown (2.44 Gyr ago) and today. Figure D1 of <a href="https://arxiv.org/abs/2605.22806">Myrtaj et al. (2026)</a>.</figcaption>
+        </figure>
+      </div>
+    </article>
+    <article class="block stack" id="concentration">
+      <div class="block-text">
+        <div class="block-copy">
+          <h3>Least concentrated as the gas disk emerges</h3>
+                  <p>The central potential is least concentrated, with a rising rotation curve, as the gas disk emerges, and it reaches its highest concentration before cooldown. This sequence challenges models in which a concentrated center triggers disk formation.</p>
+        </div>
+      </div>
+      <div class="block-figs">
+        <figure class="slot wide-figure" data-slot="Appendix G of the paper as a movie: rotation-curve shape and young-star circularity in Romeo over time">
+            <div class="frame" style="--ar: 3 / 1">
+              <video controls muted loop playsinline preload="metadata" width="1800" height="600" poster="images/research/appendix-g-poster.png" aria-label="Movie of the rotation curve, young-star circularity distribution and rotation-curve slope of the simulated galaxy Romeo over cosmic time">
+                <source src="images/research/appendix-g-romeo.mp4" type="video/mp4">
+                <source src="images/research/appendix-g-romeo.webm" type="video/webm">
+                This browser cannot play the movie.
+              </video>
+            </div>
+            <figcaption><strong>Rotation-curve shape and young-star circularity in Romeo.</strong> Appendix G of <a href="https://arxiv.org/abs/2605.22806">Myrtaj et al. (2026)</a> as a movie covering the last 13.5 Gyr. Left: the rotation curve, normalized by its value at R<sub>90</sub>, drawn solid while it still rises at R<sub>90</sub> and dashed once it peaks inside R<sub>90</sub>. Middle: the orbital circularity distribution of young stars, younger than 250 Myr. Right: the slope of the rotation curve at R<sub>90</sub> against lookback time. Dots mark snapshots with a disky young-star distribution, crosses mark the rest, and the vertical dashed lines mark the formation of the gas disk and of the stellar disk. Young stars form on rotation-dominated orbits while the rotation curve is still rising, and continue to do so thereafter. On average, the rotation curve becomes peaked a few Gyr after the disk begins to form. Cooldown, when young stars begin to form on the cold, highly circular orbits of the thin disk, occurs later still. The other simulated galaxies show a similar sequence.</figcaption>
+          </figure>
+      </div>
+    </article>
+    <article class="block" id="cooldown">
+      <div class="block-text">
+        <div class="block-copy">
+          <h3>Inner-CGM virialization triggers cooldown</h3>
+                  <p>The thin-disk phase begins when the inner circumgalactic medium (CGM) virializes, and star formation becomes steady at the same time. A thin disk requires gas to accrete slowly enough for its angular momentum to mix and become coherent before it joins the galaxy.</p>
+          <p>The temperature maps of Romeo show this transition. Before cooldown, cool and warm gas fills much of the inner halo. After cooldown, the inner CGM is hot, and cool gas lies mainly in the disk. In Romeo, Romulus and Thelma, cooldown coincides with the rise in the ratio of the gas cooling time to the free-fall time that marks the virialization of the inner CGM.</p>
+        </div>
+      </div>
+      <div class="block-figs">
+        <figure class="slot" data-slot="Gas temperature around Romeo before and after cooldown">
+          <div class="frame">
+            <button class="zoom" type="button" aria-label="Enlarge: The inner halo heats up"><img src="images/gallery/hot-inner-halo.jpg" alt="Two edge-on maps of gas around Romeo colored by temperature. Before cooldown, blue and teal cool gas fills much of the inner halo. After cooldown, the halo glows red with hot gas and cool gas lies mainly in the disk." width="1806" height="900" loading="lazy"></button>
+          </div>
+          <figcaption><strong>The inner halo heats up.</strong> Gas around Romeo, edge-on and 160 kpc across, 7.4 and 4.3 Gyr ago, colored by temperature and brightened by density. Before cooldown, cool and warm gas fills much of the inner halo. After cooldown, the inner circumgalactic medium is hot, and cool gas lies mainly in the disk.</figcaption>
+        </figure>
+      </div>
+      <div class="block-wide">
+        <figure class="slot wide-figure" data-slot="Figure 11 of the paper: inner CGM virialization, accretion and sloshing">
+          <div class="frame">
+            <button class="zoom" type="button" aria-label="Enlarge: Inner CGM virialization, rapid accretion and baryonic sloshing"><img src="images/research/paper-fig11-cgm-sloshing.png" alt="Four rows of time series for Romeo, Romulus and Thelma: the circularity of gas and young stars, the ratio of the cooling time to the free-fall time, the mass growth rate, and the sloshing parameter" width="1800" height="1369" loading="lazy"></button>
+          </div>
+          <figcaption><strong>Inner CGM virialization, rapid accretion and baryonic sloshing.</strong> For Romeo, Romulus and Thelma, against lookback time: the circularity of young stars (orange) and gas (green), the ratio of the gas cooling time to the free-fall time in the inner galaxy, the growth rate of the central mass per dynamical time, and the sloshing parameter. Cooldown occurs as the inner CGM virializes. Figure 11 of <a href="https://arxiv.org/abs/2605.22806">Myrtaj et al. (2026)</a>.</figcaption>
+        </figure>
+      </div>
+    </article>
+  </section>
+
+  <section class="section" aria-labelledby="paper-heading">
+    <h2 id="paper-heading">Publications</h2>
+    <div class="paper-list">
+    <article class="paper-card">
+      <h3>From protogalaxy through thick and thin: Why did the Milky Way evolve in three kinematic phases?</h3>
+      <p class="authors"><strong>O. Myrtaj</strong>, J. S. Bullock, M. Boylan-Kolchin, V. Chandra, C.-A. Faucher-Giguère, R. Feldmann, P. J. Gandhi, F. J. Mercado, J. Moreno, J. Stern, A. Wetzel and L. Y. Xia</p>
+      <p class="venue">Monthly Notices of the Royal Astronomical Society, accepted, 2026</p>
+      <ul class="link-row">
+        <li><a href="https://arxiv.org/abs/2605.22806">arXiv:2605.22806</a></li>
+        <li><a href="https://arxiv.org/pdf/2605.22806">PDF</a></li>
+      </ul>
+    </article>
+    <article class="paper-card">
+      <h3>Turning Point: The Dynamical Origin of the Milky Way&rsquo;s Initial Disk and Angular Momentum Structure</h3>
+      <p class="authors"><strong>O. Myrtaj</strong> et al.</p>
+      <p class="venue">In preparation</p>
+    </article>
+    <article class="paper-card">
+      <h3>Disks in Progress: The Incidence and Observability of Gas Disks Without Stellar Disks in FIREbox and MassiveFIRE</h3>
+      <p class="authors"><strong>O. Myrtaj</strong> et al.</p>
+      <p class="venue">In preparation</p>
+    </article>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="current-heading">
+    <h2 id="current-heading">Current research</h2>
+    <article class="project" id="torques">
+      <h3>The physics governing the emergence of a galaxy disk <span class="tag">In preparation</span></h3>
+      <p>I measure the gravitational torques on gas and stars as galaxies form their disks in an effort to pin down the dynamical origin of the Milky Way's angular momentum structure.</p>
+      <p>In the protogalaxy, the baryons have no well-defined center, and their bulk motions within the total potential are large. Non-axisymmetric torques from clumps, satellites and anisotropic accretion are strong enough to rearrange the angular momentum of the cool and star-forming gas within a dynamical time or two. I measure their strength with the scrambling parameter, the fractional change in a population&rsquo;s angular momentum that these torques could produce in one dynamical time. The rotation of the star-forming gas is misaligned with that of the stars, at times counter-rotating, and the binding energy of the stars is weak compared with the energy that recent supernovae inject.</p>
+      <p>The bulk motions then die down, and the baryons settle into the total potential. The torques on the cool gas weaken until they would need two or more dynamical times to rearrange its angular momentum, so coherent orbits survive and the gas disk emerges. The star-forming gas, from which stars are born, still feels strong torques and remains misaligned with the stars. The binding energy of the stars grows but stays below the supernova energy.</p>
+      <p>The torques on the star-forming gas then weaken as well, and the binding energy of the stars overtakes the energy that recent supernovae inject, so the inner galaxy is bound against feedback. The stellar disk forms, and the star-forming gas aligns with the stars.</p>
+      <figure class="slot wide-figure" data-slot="Turning Point: settling, torques and binding in four galaxies">
+        <div class="frame">
+          <button class="zoom" type="button" aria-label="Enlarge: The baryons settle, the torques weaken and the stars become bound"><img src="images/research/tp-onset-conditions.png" alt="Four columns for Romeo, Remus, Thelma and m12f, each with four rows against lookback time: the circularity of stars and gas, the sloshing parameter, the torques on cool and star-forming gas, and the binding energy of the stars relative to the energy from supernovae. Sloshing and torques are large early and fall as the disks form, while the binding energy climbs past the supernova energy around the time the stellar disk forms" width="1783" height="990" loading="lazy"></button>
+        </div>
+        <figcaption><strong>The baryons settle, the torques weaken and the stars become bound.</strong> Romeo, Remus, Thelma and m12f. From top: median orbital circularity of stars (gold) and gas (green), the sloshing parameter s<sub>b</sub>, the scrambling parameter &eta;<sub>scr</sub> of cool gas (green, below 10<sup>4</sup>&nbsp;K) and star-forming gas (magenta), and &Psi;<sub>fb</sub>, the ratio of the binding energy of the inner galaxy&rsquo;s stars to the energy that recent supernovae inject. Dashed vertical lines mark the onset of the gas disk (green) and of the stellar disk (gold), and the gray band marks the time when only the gas has a disk. Myrtaj et al. (in preparation).</figcaption>
+      </figure>
+      <figure class="slot wide-figure" data-slot="Figure 7 of Turning Point: misalignment of star-forming gas and stars">
+        <div class="frame">
+          <button class="zoom" type="button" aria-label="Enlarge: Star-forming gas and stars come into alignment as the stellar disk forms"><img src="images/research/tp-fig7-misalignment.png" alt="Three columns for Romeo, Romulus and Thelma: the circularity of gas and young stars over time on top, and below, the angle between the rotation axes of the star-forming gas and the stars, which swings widely in the protogalaxy and falls near zero once the stellar disk forms" width="1800" height="690" loading="lazy"></button>
+        </div>
+        <figcaption><strong>Star-forming gas and stars come into alignment as the stellar disk forms.</strong> Romeo, Romulus and Thelma. Top: median circularity of all gas (green) and young stars (gold). Bottom: the angle between the rotation axes of the star-forming gas and the stars. Above 90&deg;, the two rotate in opposite senses. Dashed lines mark the formation of the gas disk (green) and of the stellar disk (gold). Figure 7 of Myrtaj et al. (in preparation).</figcaption>
+      </figure>
+    </article>
+    <article class="project" id="early-disks">
+      <h3>Early disks seen by ALMA and JWST <span class="tag">In preparation</span></h3>
+      <p>ALMA has found unexpectedly cold, early disks by measuring gas kinematics. JWST finds many disk-like shapes in early galaxies, identified from imaging and axis ratios. I build mock JWST and ALMA observations of FIRE galaxies and compare them with true kinematics, which we can get from simulation data, to determine how often the images reveal genuine rotating disks.</p>
+      <p>In FIREbox, gas disks form before stellar disks across the whole galaxy population. At z = 4, 62% of galaxies have rotationally supported gas, while only 2% have rotationally supported stars, and at no redshift does a galaxy host a stellar disk without a gas disk. ALMA cold-gas kinematics and JWST imaging therefore probe different stages of disk assembly.</p>
+      <div class="fig-row" style="--cols: 1139fr 1042fr">
+        <figure class="slot" data-slot="Thelma edge-on in gas and stars at three times">
+          <div class="frame">
+            <button class="zoom" type="button" aria-label="Enlarge: Gas disks precede stellar disks in an individual galaxy&rsquo;s evolution"><img src="images/research/dip-thelma-gas-stars.jpg" alt="Thelma edge-on in gas and in stars at three times, colored by line-of-sight velocity: no disk 11.4 billion years ago, a gas disk only 5.2 billion years ago, and both disks 0.5 billion years ago" width="1338" height="1175" loading="lazy"></button>
+          </div>
+          <figcaption><strong>Gas disks precede stellar disks in an individual galaxy&rsquo;s evolution.</strong> Thelma, edge-on in gas and stars. Its gas rotates as a disk billions of years before its stars do. Myrtaj et al. (in preparation).</figcaption>
+        </figure>
+        <figure class="slot" data-slot="Fraction of FIREbox galaxies with gas and stellar disks">
+          <div class="frame">
+            <button class="zoom" type="button" aria-label="Enlarge: Gas disks precede stellar disks across a galaxy population"><img src="images/research/dip-firebox-disk-fraction.jpg" alt="Line plot of the percentage of FIREbox galaxies with gas disks and with stellar disks against redshift: 62% versus 2% at redshift 4" width="1280" height="1229" loading="lazy"></button>
+          </div>
+          <figcaption><strong>Gas disks precede stellar disks across a galaxy population.</strong> Fraction of star-forming FIREbox galaxies, with stellar masses between 10<sup>9</sup> and 10<sup>10.5</sup> solar masses, that have gas disks and stellar disks. Nearly all high-redshift disks are gas disks without stellar disks. Myrtaj et al. (in preparation).</figcaption>
+        </figure>
+      </div>
+      <figure class="slot wide-figure" data-slot="Mock ALMA and JWST views of a galaxy at z = 4">
+        <div class="frame">
+          <button class="zoom" type="button" aria-label="Enlarge: The gas formed a disk. The stars have not"><img src="images/research/dip-mock-alma-jwst.png" alt="Left, a mock ALMA velocity map of a rotating gas disk. Right, a mock JWST image of the same galaxy, round where a stellar disk would look flat." width="1658" height="820" loading="lazy"></button>
+        </div>
+        <figcaption><strong>The gas formed a disk. The stars have not.</strong> Mock ALMA and JWST observations of a simulated galaxy at z = 4, at depths both already reach. Left: [C&nbsp;II] velocity field from 8 hours with ALMA. Right: NIRCam F277W image at JADES-Deep depth, with dust. The dashed ellipse shows how a flat stellar disk would look at the inclination of the gas disk. Myrtaj et al. (in preparation).</figcaption>
+      </figure>
+    </article>
+    <article class="project" id="chemistry">
+      <h3>Chemical fingerprints <span class="tag">In preparation</span></h3>
+      <p>Each phase leaves its own chemical and kinematic signature in stars and gas. I study FIRE-2 chemical abundances to make observable predictions about the Milky Way's archaeology and evolutionary history.</p>
+      <p>The iron abundance [Fe/H] rises as each generation of stars forms, so it orders Romeo&rsquo;s stars by age. Stars born in the protogalaxy have [Fe/H] below about &minus;1, the thick disk forms between &minus;1 and 0, and the thin disk forms near the solar value.</p>
+      <p>Magnesium and oxygen come mainly from core-collapse supernovae, which explode soon after stars form, while Type Ia supernovae add iron over billions of years. [Mg/Fe] and [O/Fe] therefore fall with time, and orbital circularity jumps over a narrow range of both as the stellar disk forms. A small population of old stars, under 1% of the total, sits near [Mg/Fe] = 0 and [O/Fe] = 0 on hot orbits.</p>
+      <p>[C/N] falls steeply during the thick-disk phase and then levels off. Every star born after cooldown has nearly the same [C/N], so [C/N] separates the thin disk cleanly from older stars while saying little about the ages of thin-disk stars. Of the four ratios, [Mg/Fe] and [O/Fe] mark the formation of the stellar disk most sharply, a prediction that Gaia and APOGEE abundances can check directly.</p>
+      <div class="fig-stack">
+        <figure class="slot wide-figure" data-slot="Romeo&rsquo;s orbits and rotation against [Fe/H]">
+          <div class="frame">
+            <button class="zoom" type="button" aria-label="Enlarge: orbits and rotation against [Fe/H]"><img src="images/research/chem-feh.png" alt="Two heat maps for Romeo&rsquo;s stars today: orbital circularity and rotation speed against [Fe/H], with the protogalaxy, thick-disk and thin-disk eras marked" width="2100" height="1036" loading="lazy"></button>
+          </div>
+          <figcaption><strong>[Fe/H].</strong> Orbital circularity (left) and rotation speed (right) of Romeo&rsquo;s stars today, for all 24 million star particles within 20 kpc, with each column scaled to its own peak. The colored bands mark the protogalaxy, thick-disk and thin-disk eras, bounded by the median abundance of stars born as the stellar disk forms and at cooldown, here [Fe/H] = &minus;0.96 and 0.00. Myrtaj et al. (in preparation).</figcaption>
+        </figure>
+        <figure class="slot wide-figure" data-slot="Romeo&rsquo;s orbits and rotation against [Mg/Fe]">
+          <div class="frame">
+            <button class="zoom" type="button" aria-label="Enlarge: orbits and rotation against [Mg/Fe]"><img src="images/research/chem-mgfe.png" alt="Two heat maps for Romeo&rsquo;s stars today: orbital circularity and rotation speed against [Mg/Fe], with the protogalaxy, thick-disk and thin-disk eras marked" width="2100" height="1036" loading="lazy"></button>
+          </div>
+          <figcaption><strong>[Mg/Fe].</strong> The same for [Mg/Fe], with the eras bounded at 0.34 and 0.25.</figcaption>
+        </figure>
+        <figure class="slot wide-figure" data-slot="Romeo&rsquo;s orbits and rotation against [O/Fe]">
+          <div class="frame">
+            <button class="zoom" type="button" aria-label="Enlarge: orbits and rotation against [O/Fe]"><img src="images/research/chem-ofe.png" alt="Two heat maps for Romeo&rsquo;s stars today: orbital circularity and rotation speed against [O/Fe], with the protogalaxy, thick-disk and thin-disk eras marked" width="2100" height="1036" loading="lazy"></button>
+          </div>
+          <figcaption><strong>[O/Fe].</strong> The same for [O/Fe], with the eras bounded at 0.28 and 0.24.</figcaption>
+        </figure>
+        <figure class="slot wide-figure" data-slot="Romeo&rsquo;s orbits and rotation against [C/N]">
+          <div class="frame">
+            <button class="zoom" type="button" aria-label="Enlarge: orbits and rotation against [C/N]"><img src="images/research/chem-cn.png" alt="Two heat maps for Romeo&rsquo;s stars today: orbital circularity and rotation speed against [C/N], with the protogalaxy, thick-disk and thin-disk eras marked" width="2100" height="1036" loading="lazy"></button>
+          </div>
+          <figcaption><strong>[C/N].</strong> The same for [C/N], with the eras bounded at 0.26 and &minus;0.04.</figcaption>
+        </figure>
+      </div>
+    </article>
+    <p class="section-intro">I carry out this work as a member of the <a href="https://fire.northwestern.edu/">FIRE collaboration</a> (Feedback In Realistic Environments), whose cosmological simulations model star formation and stellar feedback in detail.</p>
+  </section>
+
+  <section class="section" aria-labelledby="earlier-heading">
+    <h2 id="earlier-heading">Earlier research</h2>
+    <ul class="plain-list">
+      <li>
+        <span>Self-interacting dark matter and the satellites of Milky Way-mass galaxies</span>
+        <span class="detail">NSF REU at UT Austin with Mike Boylan-Kolchin and Omid Sameie, presented at AAS 240 in 2022</span>
+      </li>
+      <li>
+        <span>Critical points of Laplacian eigenfunctions</span>
+        <span class="detail">Mathematics REU at Indiana University with Chris Judge, 2019</span>
+      </li>
+      <li>
+        <span>Particle physics theory</span>
+        <span class="detail">Undergraduate research at Virginia Tech with Ian Shoemaker</span>
+      </li>
+    </ul>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p>Department of Physics and Astronomy<br>University of California, Irvine</p>
+  <ul>
+    <li><a data-email-user="olti.myrtaj" data-email-domain="gmail.com">olti.myrtaj [at] gmail.com</a></li>
+    <li><a href="https://orcid.org/0009-0002-3536-1220">ORCID</a></li>
+    <li><a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Myrtaj%2C%20O%22">NASA ADS</a></li>
+  </ul>
+</footer>
+
+</body>
+</html>
