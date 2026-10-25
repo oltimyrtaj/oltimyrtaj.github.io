@@ -59,12 +59,20 @@
     }
   }, true);
 
+  // A movie that loads after all clears any missing mark it was given.
+  document.addEventListener("loadedmetadata", function (event) {
+    var fig = event.target && event.target.closest && event.target.closest(".slot.is-missing");
+    if (!fig) return;
+    fig.classList.remove("is-missing");
+    var note = fig.querySelector(".slot-note");
+    if (note) note.remove();
+  }, true);
+
+  // Movies count as missing only through the error listener above. Phone browsers hold a movie
+  // unloaded until it is tapped, and its loading state then looks the same as a missing file.
   function sweepMissing() {
     document.querySelectorAll(".slot img").forEach(function (img) {
       if (img.complete && img.naturalWidth === 0) markMissing(img);
-    });
-    document.querySelectorAll(".slot video").forEach(function (video) {
-      if (video.networkState === 3) markMissing(video);
     });
   }
 
